@@ -1,0 +1,3 @@
+hello=Grr... What do you want, puny human?
+riddle=Answer my riddle, or be eaten!
+bye=Hmph. Get out of my sight.

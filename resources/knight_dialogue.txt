@@ -1,0 +1,4 @@
+hello=Hail, adventurer! How can I assist you?
+Herbal Mixture=Take this Herbal Mixture. It may aid you on your journey..
+quest=If you solve the puzzle in the library, I shall forever be in your debt.
+bye=Fare thee well! May your blade stay sharp.

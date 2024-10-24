@@ -1,0 +1,4 @@
+hello=Greetings, traveler! How may I assist you?
+magic=Magic is a powerful force, but it requires great wisdom to wield.
+crystal lens=Take this Crystal Lens. It may serve you well on your journey.
+bye=Farewell, traveler! May the stars guide your path.
