@@ -1,32 +1,21 @@
-#include <iostream>
-#include "Room.h"
+#include "../include/environment_manager.h"
 
 int main() {
-    // Create a new Room object
-    Room village("Village of Luminara", "A quaint village where your journey begins.");
+    EnvironmentManager env;
 
-    // Print room name and description
-    std::cout << "Room Name: " << village.getName() << std::endl;
-    std::cout << "Description: " << village.getDescription() << std::endl;
+    // Add an NPC and item to rooms
+    NPC* gorwin = new NPC("Gorwin", "A mysterious old man.");
+    Item* lens = new Item("Crystal Lens", "Used to solve puzzles.");
 
-    // Set walls and doors
-    village.setWall("North");
-    village.setWall("South");
-    village.setWall("West");
-    village.setDoor("East");
+    env.addNPCToRoom(0, 1, gorwin);
+    env.addItemToRoom(2, 1, lens);
 
-    // Print the state of each wall and door
-    std::cout << "\nWall and Door Configuration:" << std::endl;
-    std::cout << "North Wall: " << (village.hasWall("North") ? "Yes" : "No") << std::endl;
-    std::cout << "South Wall: " << (village.hasWall("South") ? "Yes" : "No") << std::endl;
-    std::cout << "East Wall: " << (village.hasWall("East") ? "Yes" : "No") << std::endl;
-    std::cout << "West Wall: " << (village.hasWall("West") ? "Yes" : "No") << std::endl;
+    env.printEnvironmentState();
 
-    std::cout << "\nDoors:" << std::endl;
-    std::cout << "North Door: " << (village.hasDoor("North") ? "Yes" : "No") << std::endl;
-    std::cout << "South Door: " << (village.hasDoor("South") ? "Yes" : "No") << std::endl;
-    std::cout << "East Door: " << (village.hasDoor("East") ? "Yes" : "No") << std::endl;
-    std::cout << "West Door: " << (village.hasDoor("West") ? "Yes" : "No") << std::endl;
+    // Simulate player movement
+    env.movePlayer("South");
+    env.movePlayer("West");
+    env.movePlayer("North");  // Invalid move
 
     return 0;
 }
